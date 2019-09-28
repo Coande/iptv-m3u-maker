@@ -63,7 +63,7 @@ class Iptv (object):
             """ % (self.DB.table)
         result = self.DB.query(sql)
 
-        with open('tv.m3u8', 'w') as f:
+        with open('tv.m3u8', 'w', encoding='UTF-8') as f:
             f.write("#EXTM3U\n")
             for item in result :
                 className = '其他频道'
@@ -115,7 +115,7 @@ class Iptv (object):
 
         jsonStr = json.dumps(fmtList)
 
-        with open('tv.json', 'w') as f:
+        with open('tv.json', 'w', encoding='UTF-8') as f:
             f.write(jsonStr)
 
 if __name__ == '__main__':

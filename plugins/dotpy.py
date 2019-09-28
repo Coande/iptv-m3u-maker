@@ -15,7 +15,7 @@ class Source (object) :
         urlList = []
 
         sourcePath = './plugins/dotpy_source'
-        with open(sourcePath, 'r') as f:
+        with open(sourcePath, 'r', encoding='UTF-8') as f:
             lines = f.readlines()
             total = len(lines)
             for i in range(0, total):
